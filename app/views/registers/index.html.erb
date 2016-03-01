@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+    <div class="container">
+
+        <div class="row6">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="/" class="list-group-item disabled"><%= image_tag("hello.png") %></a>
+                    <a href="/" class="list-group-item active"><%= image_tag("sideThisWeek.png") %></a>
+                    <a href="/orders/new" class="list-group-item"><%= image_tag("sideNewOrder.png") %></a>                    
+                    <a href="/registers/new" class="list-group-item"><%= image_tag("sideRegister.png") %></a>
+                    <a href="portfolio-1-col.html" class="list-group-item"><%= image_tag("sideBilling.png") %></a>
+                    <a href="/users/edit" class="list-group-item"><%= image_tag("sideEditProfile.png") %></a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h2>Registered Students</h2>            
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>School</th>
+                <th>Phone</th>
+                <th>Student ID</th>
+                <th>Parent ID</th>
+                <th>Approved</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @registers.each do |register| %>
+              <% if current_user.id== register.user_id%>
+            <tr>
+        
+              <td><%= register.name %>&nbsp;</td>
+              <td><%= register.address %>&nbsp;</td>
+              <td><%= register.school %>&nbsp;</td>
+              <td><%= register.phone %></td>
+              <td><%= register.kidsId %></td>
+              <td><%= register.user_id%></td>
+              <td><%=register.approved%></td>
+              <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Edit', edit_register_path(register) %></a></td>
+              <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
+            </tr>
+            <%end%>
+            <% end %>
+            </tbody>
+          </table>
+        
+        
+
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

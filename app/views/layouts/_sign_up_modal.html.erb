@@ -1,0 +1,53 @@
+<div class="modal fade" id="sign_up">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign up</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  			<div class="form-inputs">
+  	<div class="row">
+      <%= f.input :name, :required => true %><br>&nbsp;
+    </div>
+    <div class="row">
+      <%= f.input :address, :required => true %><br>&nbsp;
+    </div>
+    <div class="row">
+      <%= f.input :email, :required => true, :autofocus => true %><br>&nbsp;
+    </div>
+  <div class = "row">
+    <%= f.input :password, :required => true %><br>&nbsp;
+  </div>
+    <p>Must be atleast 8 characters!! </p>
+    <div class = "row">
+    <%= f.input :password_confirmation, :required => true %><br>&nbsp;
+    </div>
+ <div class="field">
+    
+     <%= f.radio_button :typeacct, 1, :checked => true, :hidden => true%>
+  </div>
+
+    <div class="row">
+      <%= f.label "Make premium for an extra $25 monthly" %><br>
+      <%= f.check_box :premium %>
+    </div>
+  <div class="row">
+    <%= f.label :pay_type %>
+    <%= f.select :pay_type, User::PAYMENT_TYPES,
+    prompt: 'Select a payment method' %>
+    </div>
+</div> <!-- end of modal-fade div -->
+
+  		<div class="form-actions">
+    		<%= f.button :submit, "Sign up" %>
+  		</div>
+		<% end %>
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default2" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

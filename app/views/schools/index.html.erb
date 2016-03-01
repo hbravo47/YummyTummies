@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+
+        <div class="row6">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="/schools" class="list-group-item disabled"><%= image_tag("hello.png") %></a>      
+                    <a href="/users/edit" class="list-group-item"><%= image_tag("sideEditProfile.png") %></a>
+                </div>
+            </div>
+            <div>
+
+            <div class="col-md-9">
+            	    <%= form_tag(schools_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Studnet orders" %>
+<%= submit_tag "Search" %>
+<% end %>
+                <h2>School Roster</h2>            
+          <table class="table">
+            <thead>
+              <tr>
+                  <th>Student Name</th>
+                  <th>Student Id</th>
+                  <th>Parent Id</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% @registers.each do |register| %>
+            <tr>
+              <% if current_user.name== register.school%>
+              <td><%= register.name %>&nbsp;</td>
+              <td><%= register.kidsId %></td>
+              <td><%= register.user_id%></td>
+              <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Edit', edit_register_path(register) %></a></td>
+              <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
+            </tr>
+            <%end%>
+            <%end %>
+            </tbody>
+          </table>
+        
+        
+
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

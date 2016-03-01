@@ -1,0 +1,69 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+		
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+    <div class="col-md-8">
+        <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label class="dezLab">Entree:</label>
+                    <%if current_user.premium ==true %>
+             <%= f.collection_select(:mealID, @meals, :mealID, :name,{},  { :class => 'btn btn-primary3' })%>
+             <%else%>
+             <%= f.collection_select(:mealID, @meal, :mealID, :name,{},  { :class => 'btn btn-primary3' })%>
+             <%end%>
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label class="dezLab">Side:</label>
+                    <select name="side" class = "btn btn-primary3">
+						<option value="fruitSalad ">Fruit Salad</option>
+						<option value="carrots ">Carrot Fries</option>
+						<option value="apple ">Apple</option>
+					</select>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label class="dezLab">Drink:</label>
+                    <select name="drink" class = "btn btn-primary3">
+						<option value="water">Water</option>
+						<option value="appleJuice">Apple Juice</option>
+						<option value="orangeJuice">Orange Juice</option>
+					</select>
+                </div>
+            </div>
+            <div class="control-grdoup form-group" >
+                <div class="controls">
+                	<label class="dezLab">Student:</label>
+                 	<%= f.collection_select(:kidsID, @kid, :kidsId, :name,{},  { :class => 'btn btn-primary3' })%>
+                </div>
+            </div>
+            <div class="control-group form-group" >
+                <div class="controls">
+                    <label class="dezLab">Date:</label>
+                    <%= f.date_select :day,{},{ :class => 'btn btn-primary4' }%>
+                </div>
+            </div>
+            <div id="success"></div>
+            <button type="submit" class="btn btn-primary2">Create Order</button>
+        </form>
+    </div>
+
+</div>  
+  
+<% end %>
+
+
+

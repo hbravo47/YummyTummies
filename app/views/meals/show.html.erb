@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @meal.name %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @meal.calories %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @meal.premium %>
+</p>
+
+<p>
+  <strong>Pic:</strong>
+  <%= image_tag(@meal.pic, :width => 80) if @meal.pic.present? %>
+</p>
+
+<p>
+  <strong>Mealid:</strong>
+  <%= @meal.mealID %>
+</p>
+
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %>

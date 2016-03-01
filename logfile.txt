@@ -1,0 +1,124 @@
+commit cbd68801a85ccb3ed507bc23e4aeb01c580fbcf7
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Thu Mar 12 02:36:21 2015 -0400
+
+    fixed some of the links
+
+commit 4194d00b79f15369bf607a1d2d0d209ce6fd6033
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Thu Mar 12 01:59:17 2015 -0400
+
+    added orders to parent
+
+commit 7c53112c1cf7bc5cc552c8fd1b24383593448445
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Thu Mar 12 00:00:35 2015 -0400
+
+    Changed colors and edited the application layout
+
+commit 7deef2c1cd8e6856be9507db3d1aa54368455546
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 22:31:55 2015 -0400
+
+    New logo image
+
+commit 13bc1cfb0af2d729e9ced631d6d10c93871667b4
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 22:28:40 2015 -0400
+
+    Edited application layout and created a temporary logo
+
+commit b6b1bd6758610515dad1ea576b64d5c2745bd6dd
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 22:05:53 2015 -0400
+
+    Updated CSS for Aplication
+
+commit 4337b8aa0a510b913aa95d2ae704d137197e8159
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 21:48:57 2015 -0400
+
+    Played with Aplication.html.erb & application.css.scss
+
+commit 004937499415c6d09df298dc420e04037346dd8a
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Wed Mar 11 21:44:19 2015 -0400
+
+    stage
+
+commit 2daf1a1e645f8bff76c5c577c4110639bd729ff7
+Author: hbravo47 <jamuhammad@valdosta.edu>
+Date:   Wed Mar 11 21:20:36 2015 -0400
+
+    Test commit after gem update
+
+commit fdfc3bedfd81662fdae6179b56ebc993ce623e1f
+Merge: 5c1c405 fc0a254
+Author: hbravo47 <jamuhammad@valdosta.edu>
+Date:   Wed Mar 11 20:51:01 2015 -0400
+
+    Merge branch 'master' of https://github.com/VSU-CS-Senior-Seminar/Ishmael-Muhammad-Richardson into Jaboree_Branch
+    
+    Conflicts:
+    	.gitignore
+    	Gemfile
+    	app/assets/stylesheets/application.css
+    	app/controllers/application_controller.rb
+    	bin/bundle
+    	bin/rails
+    	bin/rake
+    	config.ru
+    	config/boot.rb
+    	config/environments/production.rb
+    	config/environments/test.rb
+    	config/initializers/cookies_serializer.rb
+    	config/secrets.yml
+
+commit fc0a254e44f967db176060c4e2d00a63db810fa2
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Wed Mar 11 20:37:28 2015 -0400
+
+    test
+
+commit e2a8a6ee8970bfb0df1617a8819c2d4f86640d5e
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 20:32:26 2015 -0400
+
+    Resolved final conflict
+
+commit 224c8854a3a238c6571e733ff84f6d00a5ec2c61
+Merge: 9c5ee0b 9f16e20
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 20:29:06 2015 -0400
+
+    Fixed Merge Comflicts
+
+commit 9f16e207f61518fc70a5f6a817a3aa27e2e8b8e7
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Wed Mar 11 20:14:10 2015 -0400
+
+    skylera
+
+commit a6d25c2549fa71b6ce4a8b6eae1d74c4e87ed733
+Author: Skyler richardson <sdrichardson@valdosta.edu>
+Date:   Wed Mar 11 20:09:18 2015 -0400
+
+    skyler
+
+commit 9c5ee0b86d1b6677afde153f3450bd1c0f15c9bb
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 20:08:36 2015 -0400
+
+    added test line to application
+
+commit 1be3c75c1081045a5a10bbf0efe5f12ffc3bea45
+Author: James Ishmael <jaishmael@valdosta.edu>
+Date:   Wed Mar 11 19:40:06 2015 -0400
+
+    Created Yummy Tummies Project
+
+commit 5c1c405da2a9fcfc3f7e216c739da344c268f43a
+Author: zhiguangxu <xuzhiguang@gmail.com>
+Date:   Wed Feb 18 12:16:40 2015 -0500
+
+    Initial commit

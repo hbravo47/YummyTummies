@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @register.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @register.address %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @register.school %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @register.phone %>
+</p>
+
+
+<p>
+  <strong>Kidsid:</strong>
+  <%= @register.kidsId %>
+</p>
+
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', homes_path%>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Mealname: MyString
+  calories: 1
+  date: MyString
+  price: 9.99
+  kidsID: 1
+  orderID: 1
+
+two:
+  Mealname: MyString
+  calories: 1
+  date: MyString
+  price: 9.99
+  kidsID: 1
+  orderID: 1

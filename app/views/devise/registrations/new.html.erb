@@ -1,0 +1,50 @@
+<!--<h2> There appears to be a problem with your sign up. </h2>
+<h3>Remember your password needs to be atleast 8 charachters.</h3>
+<h4> Please try signing up again. </h4>-->
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='tooltip']").tooltip();
+    });
+</script>
+
+<div id= "forum_align">
+<h2>Sign up</h2>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <%= devise_error_messages! %>
+  <div class="row">
+      <%= f.input :name, :required => true %><br>&nbsp;
+  </div>
+  <div class="row">
+      <%= f.input :address, :required => true %><br>&nbsp;
+  </div>
+  <div class="row">
+      <%= f.input :email, :required => true, :autofocus => true %><br>&nbsp;
+  </div>
+  <div class = "row">
+    <%= f.input :password, :required => true %><br>&nbsp;
+  </div>
+  <div class = "row">
+    <%= f.input :password_confirmation, :required => true %><br>&nbsp;
+  </div>
+
+  <div class="row">
+      <%= f.label "Make premium for an extra $25 monthly" %><br>
+      <%= f.check_box :premium %>
+  </div>
+  <div class="row">
+    <%= f.label :pay_type %>
+    <%= f.select :pay_type, User::PAYMENT_TYPES,
+    prompt: 'Select a payment method' %>
+  </div>
+
+  <div class="form-actions">
+    <br>
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+
+</div>

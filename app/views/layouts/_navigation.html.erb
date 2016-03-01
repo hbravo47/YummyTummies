@@ -1,0 +1,50 @@
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" title="Yummy Tummies">
+            	<%= image_tag("logo.png") %>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <% if user_signed_in? %>
+                <% if current_user.typeacct==1%>
+        
+         					<li><%= link_to 'Your Kids',   registers_path   %></li>
+                             <li><%= link_to 'View Dashboard',   parents_path   %></li>
+          					<% end %>
+                    	    <% if current_user.typeacct==2|| current_user.typeacct==4%>
+        
+         					 <li><%= link_to 'View Dashboard',   schools_path   %></li>
+                             
+          					<% end %>
+          					 <% if current_user.typeacct==3|| current_user.typeacct==4%>
+        
+         					 <li><%= link_to 'Franchise',   franchises_path   %></li>
+         					 <li><%= link_to 'Add Meal ',   new_meal_path   %></li>
+          					<% end %>
+                <% else %>
+                <li><%= link_to 'New School', new_school_path %></li>
+                <li><%= link_to 'New Franchise', new_franchise_path %></li>
+                <li><%= link_to 'Menu', page_path('menu') %></li>
+                <li><%= link_to 'Pricing', page_path('pricing') %></li>
+                <li id="login-ml"><%= link_to('Log In', '#login', data: { toggle: "modal", target: "#login" } )  %></li>
+                <% end %>
+                <% if user_signed_in? %>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+                    </ul>
+                </li
+				<% end %>
+            </ul>
+        </div>
+    </div>
+    </nav>

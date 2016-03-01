@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+
+        <div class="row6">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="/parents" class="list-group-item disabled"><%= image_tag("hello.png") %></a>
+                    <a href="/parents" class="list-group-item active"><%= image_tag("sideThisWeek.png") %></a>
+                    <a href="/orders/new" class="list-group-item"><%= image_tag("sideNewOrder.png") %></a>                    
+                    <a href="/registers/new" class="list-group-item"><%= image_tag("sideRegister.png") %></a>
+                    <a href="/pages/account" class="list-group-item"><%= image_tag("sideBilling.png") %></a>
+                    <a href="/users/edit" class="list-group-item"><%= image_tag("sideEditProfile.png") %></a>
+                </div>
+            </div>
+            <div class="col-md-9">
+            	  <h2>Meals for the Week</h2>            
+				  <table class="table">
+				    <thead>
+				      <tr>
+				        <th>Meal Name</th>
+				        <th>User Id</th>
+				        <th>Kids Id</th>
+				        <th>Order Id</th>
+				        <th>Meal Id</th>
+				        <th>Date</th>
+				        <th>Premium</th>
+				        <th>Edit</th>
+				        <th>Delete</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <% @orders.each do |order| %>
+				      <tr>
+				      	<%if order.user_id == current_user.id%>
+				        <td><%= order.Mealname %></td>
+				        <td><%= order.user_id %></td>
+				        <td><%= order.kidsID%></td>
+				        <td><%= order.id %></td>
+				        <td><%= order.mealID %></td>
+				        <td><%= order.day %></td>
+				        <td><%= order.premium %></td>
+				        <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Edit', edit_order_path(order) %></a></td>
+				        <td><a class="btn btn-sm btn-default btn-block"<%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></a></td>
+				      </tr>
+				      <%end%>
+				    <% end %>
+				    </tbody>
+				  </table>
+				
+				
+
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
